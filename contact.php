@@ -36,7 +36,7 @@
                <div class="col-lg-4 col-md-4">
                   <div class="p-4 bg-white rounded overflow-hidden position-relative shadow-sm">
                      <h4 class="mt-0 mb-4 text-dark">Feedback</h4>
-                     <form name="sentMessage" id="contactForm"  action="thankyou.php" method="post">
+                     <form name="sentMessage" id="contactForm"  action="mail.php" method="post">
                         <div class="control-group form-group">
                            <div class="controls">
                               <label>Full Name <span class="text-danger">*</span></label>

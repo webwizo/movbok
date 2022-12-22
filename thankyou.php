@@ -23,10 +23,10 @@
                      <div class="col-lg-12">
                         <div class="bg-white p-4 shadow-sm rounded h-100">
                            <h3 class="mt-0 mb-3">We have received your message, we will contact to you shortly.</h3>
-                           <p><strong>Your Name:</strong> <?php echo $_POST['fullname']; ?></p>
+                           <!-- <p><strong>Your Name:</strong> <?php echo $_POST['fullname']; ?></p>
                            <p><strong>Your Phone:</strong> <?php echo $_POST['phone']; ?></p>
                            <p><strong>Your Email:</strong> <?php echo $_POST['email']; ?></p>
-                           <p><?php echo $_POST['message']; ?></p>
+                           <p><?php echo $_POST['message']; ?></p> -->
                         </div>
                      </div>
                   </div>
