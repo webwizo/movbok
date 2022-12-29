@@ -207,8 +207,8 @@
          <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                <li class="nav-item">
-                  <a class="nav-link" href="offers.html">
-                     Offers</a>
+                  <a class="nav-link" href="entries.php">
+                     Contact Entries</a>
                </li>
                <li class="nav-item">
                   <a class="nav-link" href="about.php">About</a>

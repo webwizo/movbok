@@ -23,7 +23,6 @@ try {
 } catch (\PDOException $e) {
     throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
-
 // $stmt = $pdo->query('SELECT * FROM contact_entries');
 // print_r($stmt);
 // while ($row = $stmt->fetch())
