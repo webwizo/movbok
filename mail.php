@@ -22,5 +22,3 @@ $stmt->execute([
 
 header("Location: thankyou.php");
 
-?>
-

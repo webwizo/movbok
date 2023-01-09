@@ -24,41 +24,49 @@
                     <div class="col-lg-12">
                         <div class="bg-white p-4 shadow-sm rounded h-100">
                             <h3 class="mt-0 mb-3">Contact Entries</h3>
-                            <table class="table table-bordered table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>Fullname</th>
-                                        <th>Phone Number</th>
-                                        <th>Email Address</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                    $stmt = $pdo->query('SELECT * FROM contact_entries');
-                                    while ($row = $stmt->fetch()) {
-                                    ?>
+                            <?php
+                            $stmt = $pdo->query('SELECT * FROM contact_entries');
+                            ?>
+
+                            <?php if ($stmt->rowCount() > 0) { ?>
+
+                                <table class="table table-bordered table-striped">
+                                    <thead>
                                         <tr>
-                                            <td><?php echo $row['fullname']; ?></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>
-                                                <a href="delete_entry.php?id=<?php echo $row['id']; ?>">
-                                                    <i class="fas fa-trash"></i>
-                                                </a>
-
-                                                <a href="edit_entry.php?id=<?php echo $row['id']; ?>&name=<?php echo $row['fullname']; ?>">
-                                                    <i class="fas fa-edit"></i>
-                                                </a>
-
-                                                <a href="view_entry.php?id=<?php echo $row['id']; ?>">
-                                                    <i class="fas fa-eye"></i>
-                                                </a>
-                                            </td>
+                                            <th>Fullname</th>
+                                            <th>Phone Number</th>
+                                            <th>Email Address</th>
+                                            <th>Action</th>
                                         </tr>
-                                    <?php } ?>
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        while ($row = $stmt->fetch()) {
+                                        ?>
+                                            <tr>
+                                                <td><?php echo $row['fullname']; ?></td>
+                                                <td><?php echo $row['phone_number']; ?></td>
+                                                <td><?php echo $row['email_address']; ?></td>
+                                                <td>
+                                                    <a href="delete_entry.php?id=<?php echo $row['id']; ?>">
+                                                        <i class="fas fa-trash"></i>
+                                                    </a>
+
+                                                    <a href="edit_entry.php?id=<?php echo $row['id']; ?>">
+                                                        <i class="fas fa-edit"></i>
+                                                    </a>
+
+                                                    <a href="view_entry.php?id=<?php echo $row['id']; ?>">
+                                                        <i class="fas fa-eye"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        <?php } ?>
+                                    </tbody>
+                                </table>
+                            <?php } else { ?>
+                                NO ENTRY FOUND
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
